@@ -10,7 +10,7 @@ import { type Task } from './task.model';
 })
 export class TaskComponent {
   @Input({ required: true }) task!: Task;
-
+  @Output() add = new EventEmitter<string>();
   @Output() complete = new EventEmitter<string>();
 
   onCompleteTask() {
